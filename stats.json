@@ -1,0 +1,120 @@
+[
+  {
+    "timestamp": "2026-05-25T05:58:10.436Z",
+    "method": "GET",
+    "path": "/api/drivers",
+    "status": 200,
+    "responseTimeMs": "0.083",
+    "userAgent": "Unknown",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T05:58:10.452Z",
+    "method": "GET",
+    "path": "/api/drivers",
+    "status": 200,
+    "responseTimeMs": "0.087",
+    "userAgent": "Unknown",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T05:58:10.473Z",
+    "method": "GET",
+    "path": "/api/drivers",
+    "status": 200,
+    "responseTimeMs": "0.066",
+    "userAgent": "Unknown",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T05:58:10.482Z",
+    "method": "GET",
+    "path": "/api/drivers",
+    "status": 200,
+    "responseTimeMs": "0.143",
+    "userAgent": "Unknown",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:42:33.712Z",
+    "method": "POST",
+    "path": "/api/drivers",
+    "status": 201,
+    "responseTimeMs": "29.709",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:42:48.473Z",
+    "method": "GET",
+    "path": "/api/drivers",
+    "status": 200,
+    "responseTimeMs": "4.829",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:43:22.318Z",
+    "method": "DELETE",
+    "path": "/api/drivers/3",
+    "status": 204,
+    "responseTimeMs": "6.899",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {
+      "id": "3"
+    },
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:43:23.596Z",
+    "method": "DELETE",
+    "path": "/api/drivers/3",
+    "status": 404,
+    "responseTimeMs": null,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {
+      "id": "3"
+    },
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:43:27.206Z",
+    "method": "DELETE",
+    "path": "/api/drivers/3",
+    "status": 404,
+    "responseTimeMs": null,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {
+      "id": "3"
+    },
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:43:37.317Z",
+    "method": "GET",
+    "path": "/api/drivers",
+    "status": 200,
+    "responseTimeMs": "1.236",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {},
+    "queryParams": {}
+  },
+  {
+    "timestamp": "2026-05-25T06:43:55.713Z",
+    "method": "GET",
+    "path": "/api/drivers/1",
+    "status": 200,
+    "responseTimeMs": "2.650",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.121.0 Chrome/142.0.7444.265 Electron/39.8.8 Safari/537.36",
+    "pathVariables": {
+      "id": "1"
+    },
+    "queryParams": {}
+  }
+]

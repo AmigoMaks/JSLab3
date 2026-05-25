@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Transport Company API",
+    "version": "1.0.0",
+    "description": "API для відслідковування водіїв транспортної компанії"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Локальний сервер"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Driver": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "full_name": { "type": "string" },
+          "birth_date": { "type": "string", "format": "date" },
+          "hire_date": { "type": "string", "format": "date" }
+        }
+      },
+      "DriverInput": {
+        "type": "object",
+        "required": ["full_name", "birth_date", "hire_date"],
+        "properties": {
+          "full_name": { "type": "string", "example": "Шевченко Тарас" },
+          "birth_date": { "type": "string", "format": "date", "example": "1985-03-09" },
+          "hire_date": { "type": "string", "format": "date", "example": "2022-01-15" }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "error": { "type": "string", "example": "Опис конкретної помилки" }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/drivers": {
+      "get": {
+        "summary": "Отримати всіх водіїв",
+        "responses": {
+          "200": { "description": "Успішно", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Driver" } } } } },
+          "500": { "description": "Внутрішня помилка сервера", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      },
+      "post": {
+        "summary": "Додати нового водія",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": { "schema": { "$ref": "#/components/schemas/DriverInput" } }
+          }
+        },
+        "responses": {
+          "201": { "description": "Створено" },
+          "400": { "description": "Помилка валідації (не всі поля передані)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "500": { "description": "Внутрішня помилка сервера", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    },
+    "/api/drivers/{id}": {
+      "parameters": [
+        { "in": "path", "name": "id", "required": true, "schema": { "type": "integer" } }
+      ],
+      "get": {
+        "summary": "Отримати водія за ID",
+        "responses": {
+          "200": { "description": "Успішно", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Driver" } } } },
+          "404": { "description": "Водія не знайдено", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "500": { "description": "Внутрішня помилка сервера", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      },
+      "delete": {
+        "summary": "Видалити водія",
+        "responses": {
+          "204": { "description": "Успішно видалено" },
+          "404": { "description": "Водія не знайдено", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } },
+          "500": { "description": "Внутрішня помилка сервера", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/ErrorResponse" } } } }
+        }
+      }
+    }
+  }
+}
